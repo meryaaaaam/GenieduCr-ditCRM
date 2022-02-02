@@ -1,0 +1,1117 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Véhicule {% endblock %}
+	
+{% block body %}
+	<!--begin::Head-->
+	<head><base href="../">
+		<title> Consultation Véhicule </title>
+		<meta charset="utf-8" />
+		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 94,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
+		<meta name="keywords" content="Metronic, bootstrap, bootstrap 5, Angular, VueJs, React, Laravel, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
+		<meta property="og:url" content="https://keenthemes.com/metronic" />
+		<meta property="og:site_name" content="Keenthemes | Metronic" />
+		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<!--begin::Fonts-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<!--end::Fonts-->
+		<!--begin::Page Vendor Stylesheets(used by this page)-->
+		<link href="{{asset('/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendor Stylesheets-->
+		<!--begin::Global Stylesheets Bundle(used by all pages)-->
+		<link href="{{asset('/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<!--end::Global Stylesheets Bundle-->
+	</head>
+	<!--end::Head-->
+	<!--begin::Body-->
+	<body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+		<!--begin::Main-->
+		<!--begin::Root-->
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Page-->
+			<div class="page flex-row flex-column-fluid">
+				<!--begin::Aside-->
+				
+				<!--end::Aside-->
+				<!--begin::Wrapper-->
+				<div>
+					<!--begin::Header-->
+					<div id="kt_header" style="" class="header align-items-stretch">
+						<!--begin::Container-->
+						<div class="container-fluid d-flex align-items-stretch justify-content-between">
+							<!--begin::Aside mobile toggle-->
+							<div class="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show aside menu">
+								<div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px" id="kt_aside_mobile_toggle">
+									<!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+									<span class="svg-icon svg-icon-1">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+											<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="black"></path>
+											<path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="black"></path>
+										</svg>
+									</span>
+									<!--end::Svg Icon-->
+								</div>
+							</div>
+							<!--end::Aside mobile toggle-->
+							<!--begin::Mobile logo-->
+							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
+								<a href="../../demo1/dist/index.html" class="d-lg-none">
+									<img alt="Logo" src="/media/logos/logo-2.svg" class="h-30px">
+								</a>
+							</div>
+							<!--end::Mobile logo-->
+							<!--begin::Wrapper-->
+							<div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1" id="kt_wrapper">
+								<!--begin::Navbar-->
+								<div class="d-flex align-items-stretch" id="kt_header_nav">
+									<!--begin::Menu wrapper-->
+									<div class="header-menu align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+										<!--begin::Menu-->
+										<div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch" id="#kt_header_menu" data-kt-menu="true">
+											<div class="menu-item me-lg-1">
+												<h1><a href="{{path("vehicule")}}" class="text-muted text-hover-primary">Inventaire</a></h1>
+											</div>
+											
+										</div>
+										<!--end::Menu-->
+									</div>
+									<!--end::Menu wrapper-->
+								</div>
+								<!--end::Navbar-->
+								<!--begin::Topbar-->
+								<div class="d-flex align-items-stretch flex-shrink-0">
+									<!--begin::Toolbar wrapper-->
+									<div class="d-flex align-items-stretch flex-shrink-0">
+										<!--begin::Search-->
+										<div class="d-flex align-items-stretch ms-1 ms-lg-3">
+											<!--begin::Search-->
+											<div id="kt_header_search" class="d-flex align-items-stretch" data-kt-search-keypress="true" data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="menu" data-kt-menu-trigger="auto" data-kt-menu-overflow="false" data-kt-menu-permanent="true" data-kt-menu-placement="bottom-end" data-kt-search="true">
+												<!--begin::Search toggle-->
+												<div class="d-flex align-items-center" data-kt-search-element="toggle" id="kt_header_search_toggle">
+													<div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px">
+														<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+														<span class="svg-icon svg-icon-1">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
+																<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</div>
+												</div>
+												<!--end::Search toggle-->
+												<!--begin::Menu-->
+												<div data-kt-search-element="content" class="menu menu-sub menu-sub-dropdown p-7 w-325px w-md-375px" data-kt-menu="true">
+													<!--begin::Wrapper-->
+													<div data-kt-search-element="wrapper">
+														<!--begin::Form-->
+														<form data-kt-search-element="form" class="w-100 position-relative mb-3" autocomplete="off">
+															<!--begin::Icon-->
+															<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+															<span class="svg-icon svg-icon-2 svg-icon-lg-1 svg-icon-gray-500 position-absolute top-50 translate-middle-y ms-0">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="black"></rect>
+																	<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="black"></path>
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+															<!--end::Icon-->
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-flush ps-10" name="search" value="" placeholder="Search..." data-kt-search-element="input">
+															<!--end::Input-->
+															<!--begin::Spinner-->
+															<span class="position-absolute top-50 end-0 translate-middle-y lh-0 d-none me-1" data-kt-search-element="spinner">
+																<span class="spinner-border h-15px w-15px align-middle text-gray-400"></span>
+															</span>
+															<!--end::Spinner-->
+															<!--begin::Reset-->
+															<span class="btn btn-flush btn-active-color-primary position-absolute top-50 end-0 translate-middle-y lh-0 d-none" data-kt-search-element="clear">
+																<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+																<span class="svg-icon svg-icon-2 svg-icon-lg-1 me-0">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																		<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black"></rect>
+																		<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black"></rect>
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+															</span>
+															<!--end::Reset-->
+															<!--begin::Toolbar-->
+															<div class="position-absolute top-50 end-0 translate-middle-y" data-kt-search-element="toolbar">
+																<!--begin::Preferences toggle-->
+																<div data-kt-search-element="preferences-show" class="btn btn-icon w-20px btn-sm btn-active-color-primary me-1" data-bs-toggle="tooltip" title="" data-bs-original-title="Show search preferences">
+																	<!--begin::Svg Icon | path: icons/duotune/coding/cod001.svg-->
+																	<span class="svg-icon svg-icon-1">
+																		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																			<path opacity="0.3" d="M22.1 11.5V12.6C22.1 13.2 21.7 13.6 21.2 13.7L19.9 13.9C19.7 14.7 19.4 15.5 18.9 16.2L19.7 17.2999C20 17.6999 20 18.3999 19.6 18.7999L18.8 19.6C18.4 20 17.8 20 17.3 19.7L16.2 18.9C15.5 19.3 14.7 19.7 13.9 19.9L13.7 21.2C13.6 21.7 13.1 22.1 12.6 22.1H11.5C10.9 22.1 10.5 21.7 10.4 21.2L10.2 19.9C9.4 19.7 8.6 19.4 7.9 18.9L6.8 19.7C6.4 20 5.7 20 5.3 19.6L4.5 18.7999C4.1 18.3999 4.1 17.7999 4.4 17.2999L5.2 16.2C4.8 15.5 4.4 14.7 4.2 13.9L2.9 13.7C2.4 13.6 2 13.1 2 12.6V11.5C2 10.9 2.4 10.5 2.9 10.4L4.2 10.2C4.4 9.39995 4.7 8.60002 5.2 7.90002L4.4 6.79993C4.1 6.39993 4.1 5.69993 4.5 5.29993L5.3 4.5C5.7 4.1 6.3 4.10002 6.8 4.40002L7.9 5.19995C8.6 4.79995 9.4 4.39995 10.2 4.19995L10.4 2.90002C10.5 2.40002 11 2 11.5 2H12.6C13.2 2 13.6 2.40002 13.7 2.90002L13.9 4.19995C14.7 4.39995 15.5 4.69995 16.2 5.19995L17.3 4.40002C17.7 4.10002 18.4 4.1 18.8 4.5L19.6 5.29993C20 5.69993 20 6.29993 19.7 6.79993L18.9 7.90002C19.3 8.60002 19.7 9.39995 19.9 10.2L21.2 10.4C21.7 10.5 22.1 11 22.1 11.5ZM12.1 8.59998C10.2 8.59998 8.6 10.2 8.6 12.1C8.6 14 10.2 15.6 12.1 15.6C14 15.6 15.6 14 15.6 12.1C15.6 10.2 14 8.59998 12.1 8.59998Z" fill="black"></path>
+																			<path d="M17.1 12.1C17.1 14.9 14.9 17.1 12.1 17.1C9.30001 17.1 7.10001 14.9 7.10001 12.1C7.10001 9.29998 9.30001 7.09998 12.1 7.09998C14.9 7.09998 17.1 9.29998 17.1 12.1ZM12.1 10.1C11 10.1 10.1 11 10.1 12.1C10.1 13.2 11 14.1 12.1 14.1C13.2 14.1 14.1 13.2 14.1 12.1C14.1 11 13.2 10.1 12.1 10.1Z" fill="black"></path>
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<!--end::Preferences toggle-->
+																<!--begin::Advanced search toggle-->
+																<div data-kt-search-element="advanced-options-form-show" class="btn btn-icon w-20px btn-sm btn-active-color-primary" data-bs-toggle="tooltip" title="" data-bs-original-title="Show more search options">
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+																	<span class="svg-icon svg-icon-2">
+																		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black"></path>
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<!--end::Advanced search toggle-->
+															</div>
+															<!--end::Toolbar-->
+														</form>
+														<!--end::Form-->
+														<!--begin::Separator-->
+														<div class="separator border-gray-200 mb-6"></div>
+														<!--end::Separator-->
+													
+													</div>
+													<!--end::Wrapper-->
+												
+			
+												</div>
+												<!--end::Menu-->
+											</div>
+											<!--end::Search-->
+										</div>
+										<!--end::Search-->
+										
+										<!--begin::message-->
+										<div class="d-flex align-items-center ms-1 ms-lg-3">
+											<!--begin::Menu wrapper-->
+											<div class="btn btn-icon btn-active-light-primary position-relative w-30px h-30px w-md-40px h-md-40px" id="kt_drawer_chat_toggle">
+												<!--begin::Svg Icon | path: icons/duotune/communication/com012.svg-->
+												<span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<path opacity="0.3" d="M20 3H4C2.89543 3 2 3.89543 2 5V16C2 17.1046 2.89543 18 4 18H4.5C5.05228 18 5.5 18.4477 5.5 19V21.5052C5.5 22.1441 6.21212 22.5253 6.74376 22.1708L11.4885 19.0077C12.4741 18.3506 13.6321 18 14.8167 18H20C21.1046 18 22 17.1046 22 16V5C22 3.89543 21.1046 3 20 3Z" fill="black"></path>
+														<rect x="6" y="12" width="7" height="2" rx="1" fill="black"></rect>
+														<rect x="6" y="7" width="12" height="2" rx="1" fill="black"></rect>
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+												<span class="bullet bullet-dot bg-success h-6px w-6px position-absolute translate-middle top-0 start-50 animation-blink"></span>
+											</div>
+											<!--end::Menu wrapper-->
+										</div>
+										<!--end::message-->
+										<!--begin::User-->
+										<div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
+											<!--begin::Menu wrapper-->
+											<div class="cursor-pointer symbol symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+												<img src="/media/avatars/150-26.jpg" alt="user">
+											</div>
+											
+											<!--end::Menu wrapper-->
+										</div>
+										<!--end::User -->
+										<!--begin::Heaeder menu toggle-->
+										<div class="d-flex align-items-center d-lg-none ms-2 me-n3" title="Show header menu">
+											<div class="btn btn-icon btn-active-light-primary w-30px h-30px w-md-40px h-md-40px" id="kt_header_menu_mobile_toggle">
+												<!--begin::Svg Icon | path: icons/duotune/text/txt001.svg-->
+												<span class="svg-icon svg-icon-1">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+														<path d="M13 11H3C2.4 11 2 10.6 2 10V9C2 8.4 2.4 8 3 8H13C13.6 8 14 8.4 14 9V10C14 10.6 13.6 11 13 11ZM22 5V4C22 3.4 21.6 3 21 3H3C2.4 3 2 3.4 2 4V5C2 5.6 2.4 6 3 6H21C21.6 6 22 5.6 22 5Z" fill="black"></path>
+														<path opacity="0.3" d="M21 16H3C2.4 16 2 15.6 2 15V14C2 13.4 2.4 13 3 13H21C21.6 13 22 13.4 22 14V15C22 15.6 21.6 16 21 16ZM14 20V19C14 18.4 13.6 18 13 18H3C2.4 18 2 18.4 2 19V20C2 20.6 2.4 21 3 21H13C13.6 21 14 20.6 14 20Z" fill="black"></path>
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+											</div>
+										</div>
+										<!--end::Heaeder menu toggle-->
+									</div>
+									<!--end::Toolbar wrapper-->
+								</div>
+								<!--end::Topbar-->
+							</div>
+							<!--end::Wrapper-->
+						</div>
+						<!--end::Container-->
+					</div>
+					<!--end::Header-->
+					<!--begin::Content-->
+					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+						<!--begin::Toolbar-->
+						<div class="toolbar" id="kt_toolbar">
+							<!--begin::Container-->
+							<div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+								<!--begin::Page title-->
+								<div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+									<!--begin::Title-->
+									<h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1">Consultation Vehicule</h1>
+									<!--end::Title-->
+									<!--begin::Separator-->
+									<span class="h-20px border-gray-300 border-start mx-4"></span>
+									<!--end::Separator-->
+									<!--begin::Breadcrumb-->
+			
+									<!--end::Breadcrumb-->
+								</div>
+								<!--end::Page title-->
+								<!--begin::Actions-->
+								<!-- Button create -->
+								<!--<div class="d-flex align-items-center py-1">
+									
+									<a href="#" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app" id="kt_toolbar_primary_button">Create</a>
+									
+								</div>-->
+								<!--end::Actions-->
+							</div>
+							<!--end::Container-->
+						</div>
+						<!--end::Toolbar-->
+						<!--begin::Post-->
+						<div class="post d-flex flex-column-fluid" id="kt_post">
+							<!--begin::Container-->
+							<div id="kt_content_container" class="container-xxl">
+								<!--begin::Navbar-->
+								<div class="card mb-5 mb-xl-10">
+									<div class="card-body pt-9 pb-0">
+										<!--begin::Details-->
+										<div class="d-flex flex-wrap flex-sm-nowrap mb-3">
+											<!--begin: Pic-->
+											
+											<!--end::Pic-->
+											<!--begin::Info-->
+											<div class="flex-grow-1">
+												<!--begin::Title-->
+												
+												<!--end::Title-->
+												<!--begin::Stats-->
+												
+												<!--end::Stats-->
+											</div>
+											<!--end::Info-->
+										</div>
+										<!--end::Details-->
+										<!--begin::Navs-->
+										<ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
+											<!--begin::Nav item-->
+											<li class="nav-item mt-2">
+												<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="{{path("consultation_vehicule",{ 'id' : vehicules.Id})}}">Aperçu</a>
+											</li>
+											<!--end::Nav item-->
+											<!--begin::Nav item-->
+											<li class="nav-item mt-2">
+												<a class="nav-link text-active-primary ms-0 me-10 py-5" href="{{path("edit-vehicule",{ 'id' : vehicules.Id})}}">Information Génerale</a>
+											</li>
+                                            <li class="nav-item mt-2">
+												<a class="nav-link text-active-primary ms-0 me-10 py-5" href="{{path("options_vehicule",{ 'id' : vehicules.Id})}}">Options du Véhicule</a>
+											</li>
+											<!--end::Nav item-->
+											<!--begin::Nav item-->
+											
+											<!--end::Nav item-->
+											
+										</ul>
+										<!--begin::Navs-->
+									</div>
+								</div>
+								<!--end::Navbar-->
+								<!--begin::details View-->
+								<div class="card mb-5 mb-xl-10" id="kt_profile_details_view">
+									<!--begin::Card header-->
+									<div class="card-header cursor-pointer">
+										<!--begin::Card title-->
+										<div class="card-title m-0">
+											<h3 class="fw-bolder m-0">Options du Véhicule</h3>
+										</div>
+                                        
+										<!--end::Card title-->
+										<!--begin::Action-->
+										<a href= "{{path("edit-vehicule",{ 'id' : vehicules.Id})}}" class="btn btn-primary align-self-center">Editer Véhicule</a>
+										<!--end::Action-->
+									</div>
+                                    <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+									<!--begin::Card header-->
+									<!--begin::Card body-->
+									<div class="row mb-12">
+                
+                                                                <div class="row mb-12 ">
+                                                                    <div class="col-4">
+                                                                        <label class="col-lg-4 fw-bold text-muted">Aileron arrière</label>
+                                                                            {% if vehicules.Aileronarriere == 1 %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                            {% else %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                            {% endif %}
+                                                                        </div>	
+                                                                        
+                                                                    
+                                                                    <div class="col-4">
+                                                                        <label class="col-lg-4 fw-bold text-muted">Antipatinage</label>
+                                                                            {% if vehicules.Antipatinage == 1 %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                            {% else %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                            {% endif %}
+                                                                        </div>	
+                                                                        
+                                                                    
+                                                                    <div class="col-4">
+                                                                        <label class="col-lg-4 fw-bold text-muted">chargeur CD</label>
+                                                                            {% if vehicules.chargeurdc == 1 %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                            {% else %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                            {% endif %}
+                                                                        </div>	
+                                                                        
+                                                                    
+                                                                </div> 
+                                                                <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>   
+                                                                <div class="row mb-12 ">
+                                                                      <div class="col-4">
+                                                                        <label class="col-lg-8 fw-bold text-muted">Climatisation automatique</label>
+                                                                            {% if vehicules.climatisationautomatique == 1 %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                            {% else %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                            {% endif %}
+                                                                        </div>	
+                                                                        
+                                                                    
+                                                                    <div class="col-4">
+                                                                        <label class="col-lg-8 fw-bold text-muted">Coussin gonflable pour le conducteur</label>
+                                                                            {% if vehicules.coussingonflablepouleconducteur == 1 %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                            {% else %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                            {% endif %}
+                                                                        </div>	
+                                                                        
+                                                                    
+                                                                    <div class="col-4">
+                                                                        <label class="col-lg-8 fw-bold text-muted ">Crochet remorquage arrière</label>
+                                                                            {% if vehicules.crochetremorquagearriere == 1 %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                            {% else %}
+                                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                            {% endif %}
+                                                                        </div>	
+                                                                        
+                                                                    
+                                                                </div>
+                                                                <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div> 
+                                                                <div class="row mb-12 ">
+                                                                    <div class="col-4">
+                                                                      <label class="col-lg-8 fw-bold text-muted">Détecteur de pluie</label>
+                                                                          {% if vehicules.detecteurdepluie == 1 %}
+                                                                          <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                          {% else %}
+                                                                          <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                          {% endif %}
+                                                                      </div>	
+                                                                      
+                                                                  
+                                                                  <div class="col-4">
+                                                                      <label class="col-lg-8 fw-bold text-muted">Essuie-glaces intermittents à vitesse variable</label>
+                                                                          {% if vehicules.Essuieglacesintermittentsavitessevariable == 1 %}
+                                                                          <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                          {% else %}
+                                                                          <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                          {% endif %}
+                                                                      </div>	
+                                                                      
+                                                                  
+                                                                  <div class="col-4">
+                                                                      <label class="col-lg-8 fw-bold text-muted ">Inclinaison électrique / toit ouvrant coulissant</label>
+                                                                          {% if vehicules.inclinaisonelectriquetoitouvrantcoulissant == 1 %}
+                                                                          <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                          {% else %}
+                                                                          <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                          {% endif %}
+                                                                      </div>	
+                                                                      
+                                                                  
+                                                              </div>
+                                                              <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>  
+                                                            <div class="row mb-12 ">
+                                                                    <div class="col-4">
+                                                                    <label class="col-lg-8 fw-bold text-muted">Miroirs chauffants</label>
+                                                                        {% if vehicules.miroirschauffants == 1 %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                        {% else %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                        {% endif %}
+                                                                    </div>	
+                                                                    
+                                                                
+                                                                <div class="col-4">
+                                                                    <label class="col-lg-8 fw-bold text-muted">Ordinateur de bord </label>
+                                                                        {% if vehicules.ordinateurdebord == 1 %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                        {% else %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                        {% endif %}
+                                                                    </div>	
+                                                                    
+                                                                
+                                                                <div class="col-4">
+                                                                    <label class="col-lg-8 fw-bold text-muted ">Radio satellite</label>
+                                                                        {% if vehicules.radiosatellite == 1 %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                        {% else %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                        {% endif %}
+                                                                    </div>	
+                                                                  
+                                                              
+                                                            </div>  
+                                                            <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                                                            <div class="row mb-12 ">
+                                                                    <div class="col-4">
+                                                                    <label class="col-lg-8 fw-bold text-muted">Servo-direction</label>
+                                                                        {% if vehicules.servodirection == 1 %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                        {% else %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                        {% endif %}
+                                                                    </div>	
+                                                                    
+                                                                
+                                                                <div class="col-4">
+                                                                    <label class="col-lg-8 fw-bold text-muted">Sièges chauffants</label>
+                                                                        {% if vehicules.Sigeschauffants == 1 %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                        {% else %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                        {% endif %}
+                                                                    </div>	
+                                                                    
+                                                                
+                                                                <div class="col-4">
+                                                                    <label class="col-lg-8 fw-bold text-muted ">Sonar de stationnement arrière</label>
+                                                                        {% if vehicules.sonardestationnementarriere == 1 %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                        {% else %}
+                                                                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                        {% endif %}
+                                                                    </div>	
+                                                         </div> 
+                                                         <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div> 
+                                                         <div class="row mb-12 ">
+                                                                <div class="col-4">
+                                                                <label class="col-lg-8 fw-bold text-muted">Système d'alarme</label>
+                                                                    {% if vehicules.systemealarme == 1 %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                    {% else %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                    {% endif %}
+                                                                </div>	
+                                                                
+                                                            
+                                                            <div class="col-4">
+                                                                <label class="col-lg-8 fw-bold text-muted">Tachéomètre</label>
+                                                                    {% if vehicules.tacheometre == 1 %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                    {% else %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                    {% endif %}
+                                                                </div>	
+                                                                
+                                                            
+                                                            <div class="col-4">
+                                                                <label class="col-lg-8 fw-bold text-muted ">Vitres électriques</label>
+                                                                    {% if vehicules.vitreselectriques == 1 %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                    {% else %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                    {% endif %}
+                                                                </div>	
+                                                         </div>  
+                                                         <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                                                         <div class="row mb-12 ">
+                                                                <div class="col-4">
+                                                                <label class="col-lg-8 fw-bold text-muted">Phares anti-brouillard</label>
+                                                                    {% if vehicules.pharesantibrouillard == 1 %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                    {% else %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                    {% endif %}
+                                                                </div>	
+                                                                
+                                                            
+                                                            <div class="col-4">
+                                                                <label class="col-lg-8 fw-bold text-muted">Air climatisé</label>
+                                                                    {% if vehicules.airclimatise == 1 %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                    {% else %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                    {% endif %}
+                                                                </div>	
+                                                                
+                                                            
+                                                            <div class="col-4">
+                                                                <label class="col-lg-8 fw-bold text-muted ">Bluetooth</label>
+                                                                    {% if vehicules.bluetooth == 1 %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                    {% else %}
+                                                                    <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                    {% endif %}
+                                                                </div>	
+                                                        </div>  
+                                                        <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                                                        <div class="row mb-12 ">
+                                                            <div class="col-4">
+                                                            <label class="col-lg-8 fw-bold text-muted">Climatisation 2 zones</label>
+                                                                {% if vehicules.climatisation2zones == 1 %}
+                                                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                {% else %}
+                                                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                {% endif %}
+                                                            </div>	
+                                                            
+                                                        
+                                                        <div class="col-4">
+                                                            <label class="col-lg-8 fw-bold text-muted">Commandes au volant </label>
+                                                                {% if vehicules.commandesauvolant == 1 %}
+                                                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                {% else %}
+                                                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                {% endif %}
+                                                            </div>	
+                                                            
+                                                        
+                                                        <div class="col-4">
+                                                            <label class="col-lg-8 fw-bold text-muted ">Coussin gonflable pour le passager</label>
+                                                                {% if vehicules.coussingonflablepourlepassager == 1 %}
+                                                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                                {% else %}
+                                                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                                {% endif %}
+                                                            </div>	
+                                                    </div> 
+                                                    <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                                                    <div class="row mb-12 ">
+                                                        <div class="col-4">
+                                                        <label class="col-lg-8 fw-bold text-muted">Dégivreur arrière</label>
+                                                            {% if vehicules.degivreurarriere == 1 %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                            {% else %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                            {% endif %}
+                                                        </div>	
+                                                        
+                                                    
+                                                    <div class="col-4">
+                                                        <label class="col-lg-8 fw-bold text-muted">Enjoliveurs de roues</label>
+                                                            {% if vehicules.enjoliveursderoues == 1 %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                            {% else %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                            {% endif %}
+                                                        </div>	
+                                                        
+                                                    
+                                                    <div class="col-4">
+                                                        <label class="col-lg-8 fw-bold text-muted ">Freins ABS</label>
+                                                            {% if vehicules.freinsabc == 1 %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                            {% else %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                            {% endif %}
+                                                        </div>	
+                                                </div>  
+                                                <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                                                <div class="row mb-12 ">
+                                                        <div class="col-4">
+                                                        <label class="col-lg-8 fw-bold text-muted">Lecteur CD</label>
+                                                            {% if vehicules.lecteurdc == 1 %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                            {% else %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                            {% endif %}
+                                                        </div>	
+                                                        
+                                                    
+                                                    <div class="col-4">
+                                                        <label class="col-lg-8 fw-bold text-muted">Miroirs électriques</label>
+                                                            {% if vehicules.miroirselectriques == 1 %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                            {% else %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                            {% endif %}
+                                                        </div>	
+                                                        
+                                                    
+                                                    <div class="col-4">
+                                                        <label class="col-lg-8 fw-bold text-muted ">Ouverture du coffre à distance</label>
+                                                            {% if vehicules.ouverturesducoffreadistance == 1 %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                            {% else %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                            {% endif %}
+                                                        </div>	
+                                               </div>  
+                                               <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                                               <div class="row mb-12 ">
+                                                <div class="col-4">
+                                                <label class="col-lg-8 fw-bold text-muted">Phares Xénon</label>
+                                                    {% if vehicules.pharesxenon == 1 %}
+                                                    <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                    {% else %}
+                                                    <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                    {% endif %}
+                                                </div>	
+                                                
+                                            
+                                            <div class="col-4">
+                                                <label class="col-lg-8 fw-bold text-muted">Régulateur de vitesse</label>
+                                                    {% if vehicules.regulateurdevistesse == 1 %}
+                                                    <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                    {% else %}
+                                                    <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                    {% endif %}
+                                                </div>	
+                                                
+                                            
+                                            <div class="col-4">
+                                                <label class="col-lg-8 fw-bold text-muted ">Siège chauffant conducteur</label>
+                                                    {% if vehicules.siegechauffantconducteur == 1 %}
+                                                    <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                    {% else %}
+                                                    <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                    {% endif %}
+                                                </div>	
+                                          </div> 
+                                          <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div> 
+                                          <div class="row mb-12 ">
+                                            <div class="col-4">
+                                            <label class="col-lg-8 fw-bold text-muted">Sièges arrières traversables </label>
+                                                {% if vehicules.siegesarrierestraversables == 1 %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                {% else %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                {% endif %}
+                                            </div>	
+                                            
+                                        
+                                        <div class="col-4">
+                                            <label class="col-lg-8 fw-bold text-muted">Sièges cuir</label>
+                                                {% if vehicules.siegescuire == 1 %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                {% else %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                {% endif %}
+                                            </div>	
+                                            
+                                        
+                                        <div class="col-4">
+                                            <label class="col-lg-8 fw-bold text-muted ">Sun / moon roof </label>
+                                                {% if vehicules.sunmoonroof == 1 %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                {% else %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                {% endif %}
+                                            </div>	
+                                   </div>  
+                                   <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                                                    <div class="row mb-12 ">
+                                                        <div class="col-4">
+                                                        <label class="col-lg-8 fw-bold text-muted">Système de navigation </label>
+                                                            {% if vehicules.systemedenavigation == 1 %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                            {% else %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                            {% endif %}
+                                                        </div>	
+                                                        
+                                                    
+                                                    <div class="col-4">
+                                                        <label class="col-lg-8 fw-bold text-muted">Tapis de sol avant</label>
+                                                            {% if vehicules.tapisdesolavant == 1 %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                            {% else %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                            {% endif %}
+                                                        </div>	
+                                                        
+                                                    
+                                                    <div class="col-4">
+                                                        <label class="col-lg-8 fw-bold text-muted ">Vitres teintés</label>
+                                                            {% if vehicules.vitresteintes == 1 %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                            {% else %}
+                                                            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                            {% endif %}
+                                                        </div>	
+                                            </div> 
+                                            <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                                        <div class="row mb-12 ">
+                                            <div class="col-4">
+                                            <label class="col-lg-8 fw-bold text-muted">AM/FM stéréo </label>
+                                                {% if vehicules.amfmsterio == 1 %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                {% else %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                {% endif %}
+                                            </div>	
+                                            
+                                        
+                                        <div class="col-4">
+                                            <label class="col-lg-8 fw-bold text-muted">Caméra de recul</label>
+                                                {% if vehicules.cameraderecul == 1 %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                {% else %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                {% endif %}
+                                            </div>	
+                                            
+                                        
+                                        <div class="col-4">
+                                            <label class="col-lg-8 fw-bold text-muted ">Climatisation arrière</label>
+                                                {% if vehicules.climatisationarriere == 1 %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                                {% else %}
+                                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                                {% endif %}
+                                            </div>	
+                                </div>   
+                                <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                                <div class="row mb-12 ">
+                                    <div class="col-4">
+                                    <label class="col-lg-8 fw-bold text-muted">Contrôle de stabilité</label>
+                                        {% if vehicules.controledestabilite == 1 %}
+                                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                        {% else %}
+                                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                        {% endif %}
+                                    </div>	
+                                    
+                                
+                                <div class="col-4">
+                                    <label class="col-lg-8 fw-bold text-muted">Coussins gonflables latéraux</label>
+                                        {% if vehicules.cousinsgonflableslateraux == 1 %}
+                                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                        {% else %}
+                                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                        {% endif %}
+                                    </div>	
+                                    
+                                
+                                <div class="col-4">
+                                    <label class="col-lg-8 fw-bold text-muted ">Démarrage sans clé</label>
+                                        {% if vehicules.demarragesanscle == 1 %}
+                                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                        {% else %}
+                                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                        {% endif %}
+                                    </div>	
+                        </div> 
+                        <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                        <div class="row mb-12 ">
+                            <div class="col-4">
+                            <label class="col-lg-8 fw-bold text-muted">Entrée sans clé </label>
+                                {% if vehicules.entreesanscle == 1 %}
+                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                {% else %}
+                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                {% endif %}
+                            </div>	
+                            
+                        
+                        <div class="col-4">
+                            <label class="col-lg-8 fw-bold text-muted">Freins assistés</label>
+                                {% if vehicules.freinsassistes == 1 %}
+                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                {% else %}
+                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                {% endif %}
+                            </div>	
+                            
+                        
+                        <div class="col-4">
+                            <label class="col-lg-8 fw-bold text-muted ">Lecteur MP3</label>
+                                {% if vehicules.lecteurmp == 1 %}
+                                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                                {% else %}
+                                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                                {% endif %}
+                            </div>	
+                </div> 
+                <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+                <div class="row mb-12 ">
+                    <div class="col-4">
+                    <label class="col-lg-8 fw-bold text-muted"> Particulier</label>
+                        {% if vehicules.particulier == 1 %}
+                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                        {% else %}
+                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                        {% endif %}
+                    </div>	
+                    
+                
+                <div class="col-4">
+                    <label class="col-lg-8 fw-bold text-muted">Portes électriques</label>
+                        {% if vehicules.porteselectriques == 1 %}
+                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                        {% else %}
+                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                        {% endif %}
+                    </div>	
+                    
+                
+                <div class="col-4">
+                    <label class="col-lg-8 fw-bold text-muted ">Serrures de sécurité pour enfant </label>
+                        {% if vehicules.serruresdesecuritepourenfant == 1 %}
+                        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                        {% else %}
+                        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                        {% endif %}
+                    </div>	
+        </div> 
+        <div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+        <div class="row mb-12 ">
+            <div class="col-4">
+            <label class="col-lg-8 fw-bold text-muted">Siège électrique conducteur </label>
+                {% if vehicules.siegeelectriqueconducteur == 1 %}
+                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                {% else %}
+                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                {% endif %}
+            </div>	
+            
+        
+        <div class="col-4">
+            <label class="col-lg-8 fw-bold text-muted">Sièges baquets</label>
+                {% if vehicules.siegesbaquets == 1 %}
+                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                {% else %}
+                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                {% endif %}
+            </div>	
+            
+        
+        <div class="col-4">
+            <label class="col-lg-8 fw-bold text-muted ">Sièges mémoire </label>
+                {% if vehicules.siegesmemoire == 1 %}
+                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                {% else %}
+                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                {% endif %}
+            </div>	
+</div> 
+<div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+<div class="row mb-12 ">
+    <div class="col-4">
+    <label class="col-lg-8 fw-bold text-muted"> Système antivol</label>
+        {% if vehicules.systemeantivol == 1 %}
+        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+        {% else %}
+        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+        {% endif %}
+    </div>	
+    
+
+<div class="col-4">
+    <label class="col-lg-8 fw-bold text-muted">Sytème surveillance pression des pneus</label>
+        {% if vehicules.systemesurveillancepressiondespneus == 1 %}
+        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+        {% else %}
+        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+        {% endif %}
+    </div>	
+    
+
+<div class="col-4">
+    <label class="col-lg-8 fw-bold text-muted ">toit ouvrant </label>
+        {% if vehicules.toitouvrant == 1 %}
+        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+        {% else %}
+        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+        {% endif %}
+    </div>	
+</div> 
+<div class="card-body border-top p-9" class="card-header border-0 cursor-pointer" class="collapse show"></div>
+<div class="row mb-12 ">
+    <div class="col-4">
+    <label class="col-lg-8 fw-bold text-muted"> Volant ajustable </label>
+        {% if vehicules.volantajustable == 1 %}
+        <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+        {% else %}
+        <span class="fw-bolder fs-8 text-gray-800">Non</span>
+        {% endif %}
+    </div>
+    <div class="col-4">
+        <label class="col-lg-8 fw-bold text-muted"> Miroirs signal de courbe intégré </label>
+            {% if vehicules.Miroirssignaldecourbeintegre == 1 %}
+            <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+            {% else %}
+            <span class="fw-bolder fs-8 text-gray-800">Non</span>
+            {% endif %}
+        </div>
+        <div class="col-4">
+            <label class="col-lg-8 fw-bold text-muted"> Sièges arrières chauffants </label>
+                {% if vehicules.Siegesarriereschauffants == 1 %}
+                <span class="fw-bolder fs-8 text-gray-800">Oui</span>
+                {% else %}
+                <span class="fw-bolder fs-8 text-gray-800">Non</span>
+                {% endif %}
+            </div>
+</div>    
+
+
+
+
+
+
+
+
+
+
+                    
+
+
+
+
+
+                                                        
+                                                    
+                                                         
+                                                
+                                    
+										
+									        </div>
+									<!--end::Card body-->
+								</div>
+								<!--end::details View-->
+								<!--begin::Row-->
+								
+								<!--end::Row-->
+								<!--begin::Row-->
+								
+								<!--end::Row-->
+							</div>
+							<!--end::Container-->
+						</div>
+						<!--end::Post-->
+					</div>
+					<!--end::Content-->
+					<!--begin::Footer-->
+					<div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+						<!--begin::Container-->
+						<div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+							<!--begin::Copyright-->
+							<div class="text-dark order-2 order-md-1">
+								<span class="text-muted fw-bold me-1">2022©</span>
+								<a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
+							</div>
+							<!--end::Copyright-->
+							<!--begin::Menu-->
+							<ul class="menu menu-gray-600 menu-hover-primary fw-bold order-1">
+								<li class="menu-item">
+									<a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
+								</li>
+								<li class="menu-item">
+									<a href="https://keenthemes.com/support" target="_blank" class="menu-link px-2">Support</a>
+								</li>
+								<li class="menu-item">
+									<a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a>
+								</li>
+							</ul>
+							<!--end::Menu-->
+						</div>
+						<!--end::Container-->
+					</div>
+					<!--end::Footer-->
+				</div>
+				<!--end::Wrapper-->
+			</div>
+			<!--end::Page-->
+		</div>
+		<!--end::Root-->
+	
+		<!--begin::Modal - Users Search-->
+		<div class="modal fade" id="kt_modal_users_search" tabindex="-1" aria-hidden="true">
+			<!--begin::Modal dialog-->
+			<div class="modal-dialog modal-dialog-centered mw-650px">
+				<!--begin::Modal content-->
+				<div class="modal-content">
+					<!--begin::Modal header-->
+					<div class="modal-header pb-0 border-0 justify-content-end">
+						<!--begin::Close-->
+						<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+							<span class="svg-icon svg-icon-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</div>
+						<!--end::Close-->
+					</div>
+					<!--begin::Modal header-->
+				</div>
+				<!--end::Modal content-->
+			</div>
+			<!--end::Modal dialog-->
+		</div>
+		<!--end::Modal - Users Search-->
+		<!--begin::Modal - Invite Friends-->
+		<div class="modal fade" id="kt_modal_invite_friends" tabindex="-1" aria-hidden="true">
+			<!--begin::Modal dialog-->
+			<div class="modal-dialog mw-650px">
+				<!--begin::Modal content-->
+				<div class="modal-content">
+					<!--begin::Modal header-->
+					<div class="modal-header pb-0 border-0 justify-content-end">
+						<!--begin::Close-->
+						<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+							<span class="svg-icon svg-icon-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+								</svg>
+							</span>
+							<!--end::Svg Icon-->
+						</div>
+						<!--end::Close-->
+					</div>
+					<!--begin::Modal header-->
+					<!--begin::Modal body-->
+					
+					<!--end::Modal body-->
+				</div>
+				<!--end::Modal content-->
+			</div>
+			<!--end::Modal dialog-->
+		</div>
+		<!--end::Modal - Invite Friend-->
+		<!--end::Modals-->
+		<!--begin::Javascript-->
+		<script>var hostUrl = "assets/";</script>
+		<!--begin::Global Javascript Bundle(used by all pages)-->
+		<script src="assets/plugins/global/plugins.bundle.js"></script>
+		<script src="assets/js/scripts.bundle.js"></script>
+		<!--end::Global Javascript Bundle-->
+		<!--begin::Page Vendors Javascript(used by this page)-->
+		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+		<!--end::Page Vendors Javascript-->
+		<!--begin::Page Custom Javascript(used by this page)-->
+		<script src="assets/js/custom/widgets.js"></script>
+		<script src="assets/js/custom/apps/chat/chat.js"></script>
+		<script src="assets/js/custom/modals/upgrade-plan.js"></script>
+		<script src="assets/js/custom/modals/create-app.js"></script>
+		<script src="assets/js/custom/modals/offer-a-deal/type.js"></script>
+		<script src="assets/js/custom/modals/offer-a-deal/details.js"></script>
+		<script src="assets/js/custom/modals/offer-a-deal/finance.js"></script>
+		<script src="assets/js/custom/modals/offer-a-deal/complete.js"></script>
+		<script src="assets/js/custom/modals/offer-a-deal/main.js"></script>
+		<script src="assets/js/custom/modals/users-search.js"></script>
+		<!--end::Page Custom Javascript-->
+		<!--end::Javascript-->
+	</body>
+    {% endblock %}

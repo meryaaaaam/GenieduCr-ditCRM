@@ -1,0 +1,1476 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Concessionnaire{% endblock %}
+
+{% block body %}
+
+
+
+    
+    <!--end::Head-->
+    <!--begin::Body-->
+    <body id="kt_body" class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
+    <!--begin::Main-->
+    <!--begin::Root-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Page-->
+        <div class="page flex-row flex-column-fluid">
+
+                <!--begin::Content-->
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Toolbar-->
+                    <div class="toolbar" id="kt_toolbar">
+                        <!--begin::Container-->
+                        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+                            <!--begin::Page title-->
+                            <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
+                                <!--begin::Title-->
+                                <h1 class="d-flex align-items-center text-dark fw-bolder fs-3 my-1"> Paramètres du compte</h1>
+                                <!--end::Title-->
+                                <!--begin::Separator-->
+                                <span class="h-20px border-gray-300 border-start mx-4"></span>
+                                <!--end::Separator-->
+                                <!--begin::Breadcrumb-->
+                                <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
+                                    <!--begin::Item-->
+                                    <li class="breadcrumb-item text-muted">
+                                        <a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">Accueil</a>
+                                    </li>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <li class="breadcrumb-item">
+                                        <span class="bullet bg-gray-300 w-5px h-2px"></span>
+                                    </li>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <li class="breadcrumb-item text-muted">Profile</li>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <li class="breadcrumb-item">
+                                        <span class="bullet bg-gray-300 w-5px h-2px"></span>
+                                    </li>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <li class="breadcrumb-item text-dark">Paramètres</li>
+                                    <!--end::Item-->
+                                </ul>
+                                <!--end::Breadcrumb-->
+                            </div>
+                            <!--end::Page title-->
+                            <!--begin::Actions-->
+                            <div class="d-flex align-items-center py-1">
+                                <!--begin::Wrapper-->
+
+                                <!--end::Wrapper-->
+                                <!--begin::Button-->
+
+                                <!--end::Button-->
+                            </div>
+                            <!--end::Actions-->
+                        </div>
+                        <!--end::Container-->
+                    </div>
+                    <!--end::Toolbar-->
+                    <!--begin::Post-->
+                    <div class="post d-flex flex-column-fluid" id="kt_post">
+                        <!--begin::Container-->
+                        <div id="kt_content_container" class="container-xxl">
+
+                            <!--begin::Basic info-->
+                            <div class="card mb-5 mb-xl-10">
+
+                                <!--begin::Card title-->
+
+                                <!--end::Card title-->
+
+                                <div id="kt_account_settings_profile_details" class="collapse show">
+                                    <div id="kt_account_settings_profile_details" class="collapse show">
+                                        {{ form_start(form, {'attr': {'class': 'form fv-plugins-bootstrap5 fv-plugins-framework'}}) }}
+
+                                        <div class="col-sm-4">
+                                            {{ form_row(form.actifcrm, {"label":"Actif - CRM"}) }}
+                                        </div>
+                                        <div class="col-sm-4">
+
+                                            {{ form_row(form.actifservice, {"label":"Actif - Page Services"}) }}
+                                        </div>
+                                        <div class="col-sm-4">
+
+
+                                            {{ form_row(form.actifaccueil, {"label":"Actif - Page d'accueil"}) }}
+                                        </div>
+
+                                        <div class="row mb-6">
+
+                                            <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                                {{ form_row(form.nom)}}
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-6">
+
+                                            <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                                {{ form_row(form.lien)}}
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+
+                                            <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                                {{ form_row(form.description)}}
+                                            </div>
+                                        </div>
+                                        <div class="row mb-6">
+
+                                            <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                                                {{ form_row(form.media, {"label":"Ajouter le logo"})}}
+                                            </div>
+                                        </div>
+
+                                            </div>
+
+
+                                            <div class="card-footer d-flex justify-content-end py-6 px-9">
+                                                <button type="reset" class="btn btn-light btn-active-light-primary me-2"><a href="{{path("fabriquant")}}"> Annuler</a></button>
+                                                <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Ajouter</button>
+                                            </div>
+
+                                            {# Fermeture de la balise <form> du formulaire HTML #}
+                                            {{ form_end(form) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--end::Basic info-->
+                            <!--begin::Sign-in Method-->
+
+                            <!--end::Sign-in Method-->
+                            <!--begin::Connected Accounts-->
+
+                            <!--end::Connected Accounts-->
+                            <!--begin::Notifications-->
+
+                            <!--end::Notifications-->
+                            <!--begin::Notifications-->
+
+                            <!--end::Notifications-->
+                            <!--begin::Deactivate Account-->
+
+                            <!--end::Deactivate Account-->
+                            <!--begin::Modals-->
+
+                            <!--end::Modals-->
+                        </div>
+                        <!--end::Container-->
+                    </div>
+                    <!--end::Post-->
+                </div>
+                <!--end::Content-->
+                <!--begin::Footer-->
+                <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+                        <!--begin::Copyright-->
+                        <div class="text-dark order-2 order-md-1">
+                            <span class="text-muted fw-bold me-1">2021©</span>
+                            <a href="https://keenthemes.com" target="_blank" class="text-gray-800 text-hover-primary">Keenthemes</a>
+                        </div>
+                        <!--end::Copyright-->
+                        <!--begin::Menu-->
+                        <ul class="menu menu-gray-600 menu-hover-primary fw-bold order-1">
+                            <li class="menu-item">
+                                <a href="https://keenthemes.com" target="_blank" class="menu-link px-2">About</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="https://keenthemes.com/support" target="_blank" class="menu-link px-2">Support</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="https://1.envato.market/EA4JP" target="_blank" class="menu-link px-2">Purchase</a>
+                            </li>
+                        </ul>
+                        <!--end::Menu-->
+                    </div>
+                    <!--end::Container-->
+                </div>
+                <!--end::Footer-->
+            </div>
+            <!--end::Wrapper-->
+        </div>
+        <!--end::Page-->
+    </div>
+    <!--end::Root-->
+    <!--begin::Drawers-->
+    <!--begin::Activities drawer-->
+    <div id="kt_activities" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="activities" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'lg': '900px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_activities_toggle" data-kt-drawer-close="#kt_activities_close">
+        <div class="card shadow-none rounded-0">
+            <!--begin::Header-->
+            <div class="card-header" id="kt_activities_header">
+                <h3 class="card-title fw-bolder text-dark">Activity Logs</h3>
+                <div class="card-toolbar">
+                    <button type="button" class="btn btn-sm btn-icon btn-active-light-primary me-n5" id="kt_activities_close">
+                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                        <span class="svg-icon svg-icon-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+								</svg>
+							</span>
+                        <!--end::Svg Icon-->
+                    </button>
+                </div>
+            </div>
+            <!--end::Header-->
+            <!--begin::Body-->
+            <div class="card-body position-relative" id="kt_activities_body">
+                <!--begin::Content-->
+                <div id="kt_activities_scroll" class="position-relative scroll-y me-n5 pe-5" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-wrappers="#kt_activities_body" data-kt-scroll-dependencies="#kt_activities_header, #kt_activities_footer" data-kt-scroll-offset="5px">
+                    <!--begin::Timeline items-->
+
+                        <!--end::Timeline item-->
+                        <!--begin::Timeline item-->
+                        <div class="timeline-item">
+                            <!--begin::Timeline line-->
+                            <div class="timeline-line w-40px"></div>
+                            <!--end::Timeline line-->
+                            <!--begin::Timeline icon-->
+                            <div class="timeline-icon symbol symbol-circle symbol-40px">
+                                <div class="symbol-label bg-light">
+                                    <!--begin::Svg Icon | path: icons/duotune/communication/com010.svg-->
+                                    <span class="svg-icon svg-icon-2 svg-icon-gray-500">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<path d="M6 8.725C6 8.125 6.4 7.725 7 7.725H14L18 11.725V12.925L22 9.725L12.6 2.225C12.2 1.925 11.7 1.925 11.4 2.225L2 9.725L6 12.925V8.725Z" fill="black" />
+												<path opacity="0.3" d="M22 9.72498V20.725C22 21.325 21.6 21.725 21 21.725H3C2.4 21.725 2 21.325 2 20.725V9.72498L11.4 17.225C11.8 17.525 12.3 17.525 12.6 17.225L22 9.72498ZM15 11.725H18L14 7.72498V10.725C14 11.325 14.4 11.725 15 11.725Z" fill="black" />
+											</svg>
+										</span>
+                                    <!--end::Svg Icon-->
+                                </div>
+                            </div>
+                            <!--end::Timeline icon-->
+                            <!--begin::Timeline content-->
+                            <div class="timeline-content mb-10 mt-n1">
+                                <!--begin::Timeline heading-->
+                                <div class="pe-3 mb-5">
+                                    <!--begin::Title-->
+                                    <div class="fs-5 fw-bold mb-2">New case
+                                        <a href="#" class="text-primary fw-bolder me-1">#67890</a>is assigned to you in Multi-platform Database Design project</div>
+                                    <!--end::Title-->
+                                    <!--begin::Description-->
+                                    <div class="overflow-auto pb-5">
+                                        <!--begin::Wrapper-->
+                                        <div class="d-flex align-items-center mt-1 fs-6">
+                                            <!--begin::Info-->
+                                            <div class="text-muted me-2 fs-7">Added at 4:23 PM by</div>
+                                            <!--end::Info-->
+                                            <!--begin::User-->
+                                            <a href="#" class="text-primary fw-bolder me-1">Alice Tan</a>
+                                            <!--end::User-->
+                                        </div>
+                                        <!--end::Wrapper-->
+                                    </div>
+                                    <!--end::Description-->
+                                </div>
+                                <!--end::Timeline heading-->
+                            </div>
+                            <!--end::Timeline content-->
+                        </div>
+                        <!--end::Timeline item-->
+                        <!--begin::Timeline item-->
+                        <div class="timeline-item">
+                            <!--begin::Timeline line-->
+                            <div class="timeline-line w-40px"></div>
+                            <!--end::Timeline line-->
+                            <!--begin::Timeline icon-->
+                            <div class="timeline-icon symbol symbol-circle symbol-40px">
+                                <div class="symbol-label bg-light">
+                                    <!--begin::Svg Icon | path: icons/duotune/art/art005.svg-->
+                                    <span class="svg-icon svg-icon-2 svg-icon-gray-500">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="black" />
+												<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="black" />
+											</svg>
+										</span>
+                                    <!--end::Svg Icon-->
+                                </div>
+                            </div>
+                            <!--end::Timeline icon-->
+                            <!--begin::Timeline content-->
+                            <div class="timeline-content mb-10 mt-n1">
+                                <!--begin::Timeline heading-->
+                                <div class="pe-3 mb-5">
+                                    <!--begin::Title-->
+                                    <div class="fs-5 fw-bold mb-2">You have received a new order:</div>
+                                    <!--end::Title-->
+                                    <!--begin::Description-->
+                                    <div class="d-flex align-items-center mt-1 fs-6">
+                                        <!--begin::Info-->
+                                        <div class="text-muted me-2 fs-7">Placed at 5:05 AM by</div>
+                                        <!--end::Info-->
+                                        <!--begin::User-->
+                                        <div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Robert Rich">
+                                            <img src="assets/media/avatars/150-14.jpg" alt="img" />
+                                        </div>
+                                        <!--end::User-->
+                                    </div>
+                                    <!--end::Description-->
+                                </div>
+                                <!--end::Timeline heading-->
+                                <!--begin::Timeline details-->
+                                <div class="overflow-auto pb-5">
+                                    <!--begin::Notice-->
+                                    <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed min-w-lg-600px flex-shrink-0 p-6">
+                                        <!--begin::Icon-->
+                                        <!--begin::Svg Icon | path: icons/duotune/coding/cod004.svg-->
+                                        <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path opacity="0.3" d="M19.0687 17.9688H11.0687C10.4687 17.9688 10.0687 18.3687 10.0687 18.9688V19.9688C10.0687 20.5687 10.4687 20.9688 11.0687 20.9688H19.0687C19.6687 20.9688 20.0687 20.5687 20.0687 19.9688V18.9688C20.0687 18.3687 19.6687 17.9688 19.0687 17.9688Z" fill="black" />
+													<path d="M4.06875 17.9688C3.86875 17.9688 3.66874 17.8688 3.46874 17.7688C2.96874 17.4688 2.86875 16.8688 3.16875 16.3688L6.76874 10.9688L3.16875 5.56876C2.86875 5.06876 2.96874 4.46873 3.46874 4.16873C3.96874 3.86873 4.56875 3.96878 4.86875 4.46878L8.86875 10.4688C9.06875 10.7688 9.06875 11.2688 8.86875 11.5688L4.86875 17.5688C4.66875 17.7688 4.36875 17.9688 4.06875 17.9688Z" fill="black" />
+												</svg>
+											</span>
+                                        <!--end::Svg Icon-->
+                                        <!--end::Icon-->
+                                        <!--begin::Wrapper-->
+                                        <div class="d-flex flex-stack flex-grow-1 flex-wrap flex-md-nowrap">
+                                            <!--begin::Content-->
+                                            <div class="mb-3 mb-md-0 fw-bold">
+                                                <h4 class="text-gray-900 fw-bolder">Database Backup Process Completed!</h4>
+                                                <div class="fs-6 text-gray-700 pe-7">Login into Admin Dashboard to make sure the data integrity is OK</div>
+                                            </div>
+                                            <!--end::Content-->
+                                            <!--begin::Action-->
+                                            <a href="#" class="btn btn-primary px-6 align-self-center text-nowrap" data-bs-toggle="modal" data-bs-target="#kt_modal_">Proceed</a>
+                                            <!--end::Action-->
+                                        </div>
+                                        <!--end::Wrapper-->
+                                    </div>
+                                    <!--end::Notice-->
+                                </div>
+                                <!--end::Timeline details-->
+                            </div>
+                            <!--end::Timeline content-->
+                        </div>
+                        <!--end::Timeline item-->
+                        <!--begin::Timeline item-->
+                        <div class="timeline-item">
+                            <!--begin::Timeline line-->
+                            <div class="timeline-line w-40px"></div>
+                            <!--end::Timeline line-->
+                            <!--begin::Timeline icon-->
+                            <div class="timeline-icon symbol symbol-circle symbol-40px">
+                                <div class="symbol-label bg-light">
+                                    <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+                                    <span class="svg-icon svg-icon-2 svg-icon-gray-500">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+												<path d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z" fill="black" />
+												<path opacity="0.3" d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z" fill="black" />
+												<path opacity="0.3" d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z" fill="black" />
+											</svg>
+										</span>
+                                    <!--end::Svg Icon-->
+                                </div>
+                            </div>
+                            <!--end::Timeline icon-->
+                            <!--begin::Timeline content-->
+                            <div class="timeline-content mt-n1">
+                                <!--begin::Timeline heading-->
+                                <div class="pe-3 mb-5">
+                                    <!--begin::Title-->
+                                    <div class="fs-5 fw-bold mb-2">New order
+                                        <a href="#" class="text-primary fw-bolder me-1">#67890</a>is placed for Workshow Planning &amp; Budget Estimation</div>
+                                    <!--end::Title-->
+                                    <!--begin::Description-->
+                                    <div class="d-flex align-items-center mt-1 fs-6">
+                                        <!--begin::Info-->
+                                        <div class="text-muted me-2 fs-7">Placed at 4:23 PM by</div>
+                                        <!--end::Info-->
+                                        <!--begin::User-->
+                                        <a href="#" class="text-primary fw-bolder me-1">Jimmy Bold</a>
+                                        <!--end::User-->
+                                    </div>
+                                    <!--end::Description-->
+                                </div>
+                                <!--end::Timeline heading-->
+                            </div>
+                            <!--end::Timeline content-->
+                        </div>
+                        <!--end::Timeline item-->
+                    </div>
+                    <!--end::Timeline items-->
+                </div>
+                <!--end::Content-->
+            </div>
+            <!--end::Body-->
+            <!--begin::Footer-->
+            <div class="card-footer py-5 text-center" id="kt_activities_footer">
+                <a href="../../demo1/dist/pages/profile/activity.html" class="btn btn-bg-body text-primary">View All Activities
+                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                    <span class="svg-icon svg-icon-3 svg-icon-primary">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+							<rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1" transform="rotate(-180 18 13)" fill="black" />
+							<path d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z" fill="black" />
+						</svg>
+					</span>
+                    <!--end::Svg Icon--></a>
+            </div>
+            <!--end::Footer-->
+        </div>
+    </div>
+    <!--end::Activities drawer-->
+    <!--begin::Chat drawer-->
+    <div id="kt_drawer_chat" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="chat" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'300px', 'md': '500px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_drawer_chat_toggle" data-kt-drawer-close="#kt_drawer_chat_close">
+        <!--begin::Messenger-->
+
+    <!--end::Chat drawer-->
+    <!--end::Drawers-->
+    <!--end::Main-->
+    <!--begin::Engage drawers-->
+    <!--begin::Demos drawer-->
+    <div id="kt_engage_demos" class="bg-body" data-kt-drawer="true" data-kt-drawer-name="explore" data-kt-drawer-activate="true" data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'350px', 'lg': '475px'}" data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_engage_demos_toggle" data-kt-drawer-close="#kt_engage_demos_close">
+        <!--begin::Card-->
+        <div class="card shadow-none rounded-0 w-100">
+            <!--begin::Header-->
+            <div class="card-header" id="kt_engage_demos_header">
+                <h3 class="card-title fw-bolder text-gray-700">Explore</h3>
+                <div class="card-toolbar">
+                    <button type="button" class="btn btn-sm btn-icon btn-active-color-primary h-40px w-40px me-n6" id="kt_engage_demos_close">
+                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                        <span class="svg-icon svg-icon-2">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+								</svg>
+							</span>
+                        <!--end::Svg Icon-->
+                    </button>
+                </div>
+            </div>
+            <!--end::Header-->
+            <!--begin::Body-->
+            <div class="card-body" id="kt_engage_demos_body">
+                <!--begin::Content-->
+                <div id="kt_explore_scroll" class="scroll-y me-n5 pe-5" data-kt-scroll="true" data-kt-scroll-height="auto" data-kt-scroll-wrappers="#kt_engage_demos_body" data-kt-scroll-dependencies="#kt_engage_demos_header" data-kt-scroll-offset="5px">
+                    <!--begin::Wrapper-->
+                    <div class="mb-0">
+                        <!--begin::Heading-->
+                        <div class="mb-7">
+                            <div class="d-flex flex-stack">
+                                <h3 class="mb-0">Metronic Licenses</h3>
+                                <a href="https://themeforest.net/licenses/standard" class="fw-bold" target="_blank">License FAQs</a>
+                            </div>
+                        </div>
+                        <!--end::Heading-->
+                        <!--begin::License-->
+                        <div class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
+                            <div class="d-flex flex-stack">
+                                <div class="d-flex flex-column">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <div class="fs-6 fw-bold text-gray-800 fw-bold mb-0 me-1">Regular License</div>
+                                        <i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-dark" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client in a single end product which end users are not charged for"></i>
+                                    </div>
+                                    <div class="fs-7 text-muted">For single end product used by you or one client</div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <span class="text-muted fs-7 fw-bold me-n1">$</span>
+                                    <span class="text-dark fs-1 fw-bolder">39</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::License-->
+                        <!--begin::License-->
+                        <div class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
+                            <div class="d-flex flex-stack">
+                                <div class="d-flex flex-column">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <div class="fs-6 fw-bold text-gray-800 fw-bold mb-0 me-1">Extended License</div>
+                                        <i class="text-gray-400 fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="popover" data-bs-custom-class="popover-dark" data-bs-trigger="hover" data-bs-placement="top" data-bs-content="Use, by you or one client, in a single end product which end users can be charged for."></i>
+                                    </div>
+                                    <div class="fs-7 text-muted">For single SaaS app with paying users</div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <span class="text-muted fs-7 fw-bold me-n1">$</span>
+                                    <span class="text-dark fs-1 fw-bolder">939</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::License-->
+                        <!--begin::License-->
+                        <div class="rounded border border-dashed border-gray-300 py-4 px-6 mb-5">
+                            <div class="d-flex flex-stack">
+                                <div class="d-flex flex-column">
+                                    <div class="d-flex align-items-center mb-1">
+                                        <div class="fs-6 fw-bold text-gray-800 fw-bold mb-0 me-1">Custom License</div>
+                                    </div>
+                                    <div class="fs-7 text-muted">Reach us for custom license offers.</div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <a href="https://keenthemes.com/contact/" class="btn btn-sm btn-success" target="_blank">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::License-->
+                        <!--begin::Purchase-->
+                        <a href="https://1.envato.market/EA4JP" class="btn btn-primary mb-15 w-100">Buy Now</a>
+                        <!--end::Purchase-->
+                        <!--begin::Demos-->
+                        <div class="mb-0">
+                            <h3 class="fw-bolder text-center mb-6">Metronic Demos</h3>
+                            <!--begin::Row-->
+                            <div class="row g-5">
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-success rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo1.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo1" class="btn btn-sm btn-success shadow">Demo 1</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo2.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo2" class="btn btn-sm btn-success shadow">Demo 2</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo3.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo3" class="btn btn-sm btn-success shadow">Demo 3</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo4.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo4" class="btn btn-sm btn-success shadow">Demo 4</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo5.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo5" class="btn btn-sm btn-success shadow">Demo 5</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo6.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo6" class="btn btn-sm btn-success shadow">Demo 6</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo7.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo7" class="btn btn-sm btn-success shadow">Demo 7</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo8.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo8" class="btn btn-sm btn-success shadow">Demo 8</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo9.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo9" class="btn btn-sm btn-success shadow">Demo 9</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo10.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo10" class="btn btn-sm btn-success shadow">Demo 10</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo11.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo11" class="btn btn-sm btn-success shadow">Demo 11</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo12.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo12" class="btn btn-sm btn-success shadow">Demo 12</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo13.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo13" class="btn btn-sm btn-success shadow">Demo 13</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo14.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo14" class="btn btn-sm btn-success shadow">Demo 14</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo15.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo15" class="btn btn-sm btn-success shadow">Demo 15</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo16.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo16" class="btn btn-sm btn-success shadow">Demo 16</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo17.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo17" class="btn btn-sm btn-success shadow">Demo 17</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo18.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo18" class="btn btn-sm btn-success shadow">Demo 18</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo19.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo19" class="btn btn-sm btn-success shadow">Demo 19</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo20.png" alt="demo" class="w-100" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <a href="https://preview.keenthemes.com/metronic8/demo20" class="btn btn-sm btn-success shadow">Demo 20</a>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo21.png" alt="demo" class="w-100 opacity-25" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo22.png" alt="demo" class="w-100 opacity-25" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo23.png" alt="demo" class="w-100 opacity-25" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-6">
+                                    <!--begin::Demo-->
+                                    <div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
+                                        <div class="overlay-wrapper">
+                                            <img src="assets/media/demos/demo24.png" alt="demo" class="w-100 opacity-25" />
+                                        </div>
+                                        <div class="overlay-layer bg-dark bg-opacity-10">
+                                            <div class="badge badge-white px-6 py-4 fw-bold fs-base shadow">Coming soon</div>
+                                        </div>
+                                    </div>
+                                    <!--end::Demo-->
+                                </div>
+                                <!--end::Col-->
+                            </div>
+                            <!--end::Row-->
+                        </div>
+                        <!--end::Demos-->
+                    </div>
+                    <!--end::Wrapper-->
+                </div>
+                <!--end::Content-->
+            </div>
+            <!--end::Body-->
+        </div>
+        <!--end::Card-->
+    </div>
+    <!--end::Demos drawer-->
+    <!--end::Engage drawers-->
+    <!--begin::Engage toolbar-->
+    <!--<div class="engage-toolbar d-flex position-fixed px-5 fw-bolder zindex-2 top-50 end-0 transform-90 mt-10 mt-lg-20 gap-2">
+
+			<button id="kt_engage_demos_toggle" class="engage-demos-toggle btn btn-flex h-35px bg-body btn-color-gray-700 btn-active-color-gray-900 shadow-sm fs-6 px-4 rounded-top-0" title="Check out 20 more demos" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-dismiss="click" data-bs-trigger="hover">
+				<span id="kt_engage_demos_label">Demos</span>
+			</button>
+
+			<a href="https://1.envato.market/EA4JP" target="_blank" class="engage-purchase-link btn btn-flex h-35px bg-body btn-color-gray-700 btn-active-color-gray-900 px-5 shadow-sm rounded-top-0">Buy Now</a>
+
+		</div>-->
+    <!--end::Engage toolbar-->
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+        <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+        <span class="svg-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="black" />
+					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="black" />
+				</svg>
+			</span>
+        <!--end::Svg Icon-->
+    </div>
+    <!--end::Scrolltop-->
+    <!--begin::Modals-->
+    <!--begin::Modal - Upgrade plan-->
+    <div class="modal fade" id="kt_modal_upgrade_plan" tabindex="-1" aria-hidden="true">
+        <!--begin::Modal dialog-->
+        <div class="modal-dialog modal-xl">
+            <!--begin::Modal content-->
+            <div class="modal-content rounded">
+                <!--begin::Modal header-->
+                <div class="modal-header justify-content-end border-0 pb-0">
+                    <!--begin::Close-->
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                        <span class="svg-icon svg-icon-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+								</svg>
+							</span>
+                        <!--end::Svg Icon-->
+                    </div>
+                    <!--end::Close-->
+                </div>
+                <!--end::Modal header-->
+                <!--begin::Modal body-->
+                <div class="modal-body pt-0 pb-15 px-5 px-xl-20">
+                    <!--begin::Heading-->
+                    <div class="mb-13 text-center">
+                        <h1 class="mb-3">Upgrade a Plan</h1>
+                        <div class="text-muted fw-bold fs-5">If you need more info, please check
+                            <a href="#" class="link-primary fw-bolder">Pricing Guidelines</a>.</div>
+                    </div>
+                    <!--end::Heading-->
+                    <!--begin::Plans-->
+                    <div class="d-flex flex-column">
+                        <!--begin::Nav group-->
+                        <div class="nav-group nav-group-outline mx-auto" data-kt-buttons="true">
+                            <a href="#" class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3 me-2 active" data-kt-plan="month">Monthly</a>
+                            <a href="{{path("concessionnaire")}}" class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3" data-kt-plan="annual">Annual</a>
+                        </div>
+                        <!--end::Nav group-->
+                        <!--begin::Row-->
+                        <div class="row mt-10">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 mb-10 mb-lg-0">
+                                <!--begin::Tabs-->
+                                <div class="nav flex-column">
+                                    <!--begin::Tab link-->
+                                    <div class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 active mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_startup">
+                                        <!--end::Description-->
+                                        <div class="d-flex align-items-center me-2">
+                                            <!--begin::Radio-->
+                                            <div class="form-check form-check-custom form-check-solid form-check-success me-6">
+                                                <input class="form-check-input" type="radio" name="plan" checked="checked" value="startup" />
+                                            </div>
+                                            <!--end::Radio-->
+                                            <!--begin::Info-->
+                                            <div class="flex-grow-1">
+                                                <h2 class="d-flex align-items-center fs-2 fw-bolder flex-wrap">Startup</h2>
+                                                <div class="fw-bold opacity-50">Best for startups</div>
+                                            </div>
+                                            <!--end::Info-->
+                                        </div>
+                                        <!--end::Description-->
+                                        <!--begin::Price-->
+                                        <div class="ms-5">
+                                            <span class="mb-2">$</span>
+                                            <span class="fs-3x fw-bolder" data-kt-plan-price-month="39" data-kt-plan-price-annual="399">39</span>
+                                            <span class="fs-7 opacity-50">/
+												<span data-kt-element="period">Mon</span></span>
+                                        </div>
+                                        <!--end::Price-->
+                                    </div>
+                                    <!--end::Tab link-->
+                                    <!--begin::Tab link-->
+                                    <div class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_advanced">
+                                        <!--end::Description-->
+                                        <div class="d-flex align-items-center me-2">
+                                            <!--begin::Radio-->
+                                            <div class="form-check form-check-custom form-check-solid form-check-success me-6">
+                                                <input class="form-check-input" type="radio" name="plan" value="advanced" />
+                                            </div>
+                                            <!--end::Radio-->
+                                            <!--begin::Info-->
+                                            <div class="flex-grow-1">
+                                                <h2 class="d-flex align-items-center fs-2 fw-bolder flex-wrap">Advanced</h2>
+                                                <div class="fw-bold opacity-50">Best for 100+ team size</div>
+                                            </div>
+                                            <!--end::Info-->
+                                        </div>
+                                        <!--end::Description-->
+                                        <!--begin::Price-->
+                                        <div class="ms-5">
+                                            <span class="mb-2">$</span>
+                                            <span class="fs-3x fw-bolder" data-kt-plan-price-month="339" data-kt-plan-price-annual="3399">339</span>
+                                            <span class="fs-7 opacity-50">/
+												<span data-kt-element="period">Mon</span></span>
+                                        </div>
+                                        <!--end::Price-->
+                                    </div>
+                                    <!--end::Tab link-->
+                                    <!--begin::Tab link-->
+                                    <div class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_enterprise">
+                                        <!--end::Description-->
+                                        <div class="d-flex align-items-center me-2">
+                                            <!--begin::Radio-->
+                                            <div class="form-check form-check-custom form-check-solid form-check-success me-6">
+                                                <input class="form-check-input" type="radio" name="plan" value="enterprise" />
+                                            </div>
+                                            <!--end::Radio-->
+                                            <!--begin::Info-->
+                                            <div class="flex-grow-1">
+                                                <h2 class="d-flex align-items-center fs-2 fw-bolder flex-wrap">Enterprise
+                                                    <span class="badge badge-light-success ms-2 fs-7">Most popular</span></h2>
+                                                <div class="fw-bold opacity-50">Best value for 1000+ team</div>
+                                            </div>
+                                            <!--end::Info-->
+                                        </div>
+                                        <!--end::Description-->
+                                        <!--begin::Price-->
+                                        <div class="ms-5">
+                                            <span class="mb-2">$</span>
+                                            <span class="fs-3x fw-bolder" data-kt-plan-price-month="999" data-kt-plan-price-annual="9999">999</span>
+                                            <span class="fs-7 opacity-50">/
+												<span data-kt-element="period">Mon</span></span>
+                                        </div>
+                                        <!--end::Price-->
+                                    </div>
+                                    <!--end::Tab link-->
+                                    <!--begin::Tab link-->
+                                    <div class="nav-link btn btn-outline btn-outline-dashed btn-color-dark d-flex flex-stack text-start p-6">
+                                        <!--end::Description-->
+                                        <div class="d-flex align-items-center me-2">
+                                            <!--begin::Radio-->
+                                            <div class="form-check form-check-custom form-check-solid form-check-success me-6">
+                                                <input class="form-check-input" type="radio" name="plan" value="custom" />
+                                            </div>
+                                            <!--end::Radio-->
+                                            <!--begin::Info-->
+                                            <div class="flex-grow-1">
+                                                <h2 class="d-flex align-items-center fs-2 fw-bolder flex-wrap">Custom</h2>
+                                                <div class="fw-bold opacity-50">Requet a custom license</div>
+                                            </div>
+                                            <!--end::Info-->
+                                        </div>
+                                        <!--end::Description-->
+                                        <!--begin::Price-->
+                                        <div class="ms-5">
+                                            <a href="#" class="btn btn-sm btn-primary">Contact Us</a>
+                                        </div>
+                                        <!--end::Price-->
+                                    </div>
+                                    <!--end::Tab link-->
+                                </div>
+                                <!--end::Tabs-->
+                            </div>
+                            <!--end::Col-->
+                            <!--begin::Col-->
+                            <div class="col-lg-6">
+                                <!--begin::Tab content-->
+                                <div class="tab-content rounded h-100 bg-light p-10">
+                                    <!--begin::Tab Pane-->
+                                    <div class="tab-pane fade show active" id="kt_upgrade_plan_startup">
+                                        <!--begin::Heading-->
+                                        <div class="pb-5">
+                                            <h2 class="fw-bolder text-dark">What’s in Startup Plan?</h2>
+                                            <div class="text-muted fw-bold">Optimal for 10+ team size and new startup</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Body-->
+                                        <div class="pt-1">
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Up to 10 Active Users</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Up to 30 Project Integrations</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-muted flex-grow-1">Finance Module</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
+                                                <span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="black" />
+															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-muted flex-grow-1">Accounting Module</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
+                                                <span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="black" />
+															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-muted flex-grow-1">Network Platform</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
+                                                <span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="black" />
+															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center">
+                                                <span class="fw-bold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
+                                                <span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="black" />
+															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                        </div>
+                                        <!--end::Body-->
+                                    </div>
+                                    <!--end::Tab Pane-->
+                                    <!--begin::Tab Pane-->
+                                    <div class="tab-pane fade" id="kt_upgrade_plan_advanced">
+                                        <!--begin::Heading-->
+                                        <div class="pb-5">
+                                            <h2 class="fw-bolder text-dark">What’s in Startup Plan?</h2>
+                                            <div class="text-muted fw-bold">Optimal for 100+ team size and grown company</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Body-->
+                                        <div class="pt-1">
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Up to 10 Active Users</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Up to 30 Project Integrations</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-muted flex-grow-1">Network Platform</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
+                                                <span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="black" />
+															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center">
+                                                <span class="fw-bold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen040.svg-->
+                                                <span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="black" />
+															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                        </div>
+                                        <!--end::Body-->
+                                    </div>
+                                    <!--end::Tab Pane-->
+                                    <!--begin::Tab Pane-->
+                                    <div class="tab-pane fade" id="kt_upgrade_plan_enterprise">
+                                        <!--begin::Heading-->
+                                        <div class="pb-5">
+                                            <h2 class="fw-bolder text-dark">What’s in Startup Plan?</h2>
+                                            <div class="text-muted fw-bold">Optimal for 1000+ team and enterpise</div>
+                                        </div>
+                                        <!--end::Heading-->
+                                        <!--begin::Body-->
+                                        <div class="pt-1">
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Up to 10 Active Users</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Up to 30 Project Integrations</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center mb-7">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Network Platform</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                            <!--begin::Item-->
+                                            <div class="d-flex align-items-center">
+                                                <span class="fw-bold fs-5 text-gray-700 flex-grow-1">Unlimited Cloud Space</span>
+                                                <!--begin::Svg Icon | path: icons/duotune/general/gen043.svg-->
+                                                <span class="svg-icon svg-icon-1 svg-icon-success">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="black" />
+															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="black" />
+														</svg>
+													</span>
+                                                <!--end::Svg Icon-->
+                                            </div>
+                                            <!--end::Item-->
+                                        </div>
+                                        <!--end::Body-->
+                                    </div>
+                                    <!--end::Tab Pane-->
+                                </div>
+                                <!--end::Tab content-->
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Plans-->
+                    <!--begin::Actions-->
+                    <div class="d-flex flex-center flex-row-fluid pt-12">
+                        <button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Upgrade Plan</button>
+                    </div>
+                    <!--end::Actions-->
+                </div>
+                <!--end::Modal body-->
+            </div>
+            <!--end::Modal content-->
+        </div>
+        <!--end::Modal dialog-->
+    </div>
+    <!--end::Modal - Upgrade plan-->
+
+    <!--begin::Modal - Offer A Deal-->
+    <div class="modal fade" id="kt_modal_offer_a_deal" tabindex="-1" aria-hidden="true">
+        <!--begin::Modal dialog-->
+        <div class="modal-dialog modal-dialog-centered mw-1000px">
+            <!--begin::Modal content-->
+            <div class="modal-content">
+                <!--begin::Modal header-->
+                <div class="modal-header py-7 d-flex justify-content-between">
+                    <!--begin::Modal title-->
+                    <h2>Offer a Deal</h2>
+                    <!--end::Modal title-->
+                    <!--begin::Close-->
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                        <span class="svg-icon svg-icon-1">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
+									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
+								</svg>
+							</span>
+                        <!--end::Svg Icon-->
+                    </div>
+                    <!--end::Close-->
+                </div>
+                <!--begin::Modal header-->
+                <!--begin::Modal body-->
+
+                <!--begin::Modal body-->
+            </div>
+        </div>
+    </div>
+    <!--end::Modal - Offer A Deal-->
+    <!--begin::Modal - Users Search-->
+    <div class="modal fade" id="kt_modal_users_search" tabindex="-1" aria-hidden="true">
+        <!--begin::Modal dialog-->
+
+            <!--end::Modal content-->
+        </div>
+        <!--end::Modal dialog-->
+    </div>
+    <!--end::Modal - Users Search-->
+    <!--begin::Modal - Invite Friends-->
+    <div class="modal fade" id="kt_modal_invite_friends" tabindex="-1" aria-hidden="true">
+        <!--begin::Modal dialog-->
+        <div class="modal-dialog mw-650px">
+            <!--begin::Modal content-->
+
+            <!--end::Modal content-->
+        </div>
+        <!--end::Modal dialog-->
+    </div>
+    <!--end::Modal - Invite Friend-->
+    <!--end::Modals-->
+    <!--begin::Javascript-->
+    <script>var hostUrl = "assets/";</script>
+    <!--begin::Global Javascript Bundle(used by all pages)-->
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
+    <!--end::Global Javascript Bundle-->
+    <!--begin::Page Vendors Javascript(used by this page)-->
+    <script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+    <!--end::Page Vendors Javascript-->
+    <!--begin::Page Custom Javascript(used by this page)-->
+    <script src="assets/js/custom/account/settings/signin-methods.js"></script>
+    <script src="assets/js/custom/account/settings/profile-details.js"></script>
+    <script src="assets/js/custom/account/settings/deactivate-account.js"></script>
+    <script src="assets/js/custom/widgets.js"></script>
+    <script src="assets/js/custom/apps/chat/chat.js"></script>
+    <script src="assets/js/custom/modals/upgrade-plan.js"></script>
+    <script src="assets/js/custom/modals/create-app.js"></script>
+    <script src="assets/js/custom/modals/offer-a-deal/type.js"></script>
+    <script src="assets/js/custom/modals/offer-a-deal/details.js"></script>
+    <script src="assets/js/custom/modals/offer-a-deal/finance.js"></script>
+    <script src="assets/js/custom/modals/offer-a-deal/complete.js"></script>
+    <script src="assets/js/custom/modals/offer-a-deal/main.js"></script>
+    <script src="assets/js/custom/modals/two-factor-authentication.js"></script>
+    <script src="assets/js/custom/modals/users-search.js"></script>
+    <!--end::Page Custom Javascript-->
+    <!--end::Javascript-->
+    </body>
+{% endblock %}
